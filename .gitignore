@@ -7,9 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
 dist
 dist-ssr
+*.local
+.vite/
+
+# Build output
+dist/
+build/
+dist-ssr/
 *.local
 
 # Editor directories and files
@@ -22,3 +30,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Others
+vite.svg
