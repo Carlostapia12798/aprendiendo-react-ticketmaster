@@ -1,3 +1,6 @@
+import './styles.css';
+import style from './eventItem.module.css' // se importa el modulo de css para dar estilos
+
 const EventItiem = ({ info, id, name, image, onEventClick }) => {
     
 const handlerSeeMoreClick = (evt) => { 
@@ -6,11 +9,13 @@ const handlerSeeMoreClick = (evt) => {
                 };
 
     return (
-        <div>
+        <div className='event-item-container' /*se le debe asignar el className de esta forma = {style.eventItemContainer} esto le asigna un id unico para que no colisionen los estilos*/>
             <img src={image} alt={name} width={200} height={200} />
-            <h4>{name}</h4>
-            <p>{info}</p>
-            <button onClick={handlerSeeMoreClick}>Ver mas</button>
+            <div className='event-info-container'>
+                <h4 className='event-name'>{name}</h4>
+                <p className='event-info'>{info}</p>
+                <button onClick={handlerSeeMoreClick} className='see-more-btn'>Ver mas</button>
+            </div>
         </div>
     );
 };
