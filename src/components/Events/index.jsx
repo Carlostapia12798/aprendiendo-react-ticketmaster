@@ -1,12 +1,14 @@
+import { useNavigate } from "react-router-dom";  // es otra forma de tratar las rutas sin <Link to={`/detail/${id}`}>
 import useEventData from "../../hooks/useEventsData";
 import EventItiem from "./components/EvensItem";
 
 
 const Events = ({searchTerm}) => {
     const { events } = useEventData();
+    const navigate = useNavigate();  // se instancia el hook
 
     const handleEventItemClick = (id) => {
-        console.log('evento clickeado: ', id);
+        navigate(`/detail/${id}`); // se utiliza para definir los parametros en rutas y redirigir
     };
 
     const renderEvents = () => {

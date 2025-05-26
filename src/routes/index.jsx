@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         errorElement: <Error404 />
     },
     {
-        path: '/Detail',
+        path: '/Detail/:eventId',
         element: <Detail />
     }
 
